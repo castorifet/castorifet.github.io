@@ -380,8 +380,6 @@ function gameTapEvent(e) {
         if (!_close) {
             createjs.Sound.play("err");
         }
-        gameOver();
-        tar.className += ' bad';
     }
     return false;
 }
