@@ -155,6 +155,10 @@ function gameInit() {
         src: "./static/music/tap.mp3",
         id: "tap"
     });
+    createjs.Sound.registerSound({
+        src: "./static/music/ptm.mp3",
+        id: "Pentiment"
+    });
     gameRestart();
 }
 
@@ -197,6 +201,7 @@ function gameOver() {
     date2 = new Date();
     _gameOver = true;
     clearInterval(_gameTime);
+    createjs.Sound.play("Pentiment");
     setTimeout(function () {
         GameLayerBG.className = '';
         showGameScoreLayer();
