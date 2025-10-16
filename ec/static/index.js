@@ -449,14 +449,11 @@ function hideGameScoreLayer() {
 }
 
 function replayBtn() {
-    gameRestart();
-    hideGameScoreLayer();
+    location.reload();
 }
 
 function backBtn() {
-    gameRestart();
-    hideGameScoreLayer();
-    showWelcomeLayer();
+    location.reload();
 }
 
 function shareText(score) {
