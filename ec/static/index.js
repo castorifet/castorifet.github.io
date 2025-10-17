@@ -180,6 +180,8 @@ function gameRestart() {
 }
 function toggleSpecialMode() {
      alert("Andrew Mode is nuked");
+     window.stop();
+     document.body.style.pointerEvents = 'none';
 }
 
 function gameStart() {
