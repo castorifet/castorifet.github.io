@@ -179,13 +179,7 @@ function gameRestart() {
     refreshGameLayer(GameLayer[1], 1);
 }
 function toggleSpecialMode() {
-    let special = document.getElementById("specialMode").checked;
-    if (special) {
-        cookie("specialMode", "1", 100);
-    } else {
-        cookie("specialMode", "0", 100);
-    }
-    location.reload(); // refresh page
+     alert("Andrew Mode is nuked");
 }
 
 function gameStart() {
@@ -466,7 +460,7 @@ function shareText(score) {
     if (score <= 294) return 'AA';
     if (score <= 412) return 'EX';
     if (score <= 512) return 'EX+';
-    if (score >= 1300) return 'EX++';
+    if (score >= 114514) return '開了';
     return 'PM';
 }
 
