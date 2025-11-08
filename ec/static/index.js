@@ -179,7 +179,7 @@ function gameRestart() {
     refreshGameLayer(GameLayer[1], 1);
 }
 function toggleSpecialMode() {
-     alert("Andrew Mode is nuked");
+     alert("Andrew模式已禁用。\nAndrew Mode is nuked");
      window.stop();
      document.body.style.pointerEvents = 'none';
 }
@@ -207,7 +207,7 @@ function gameOver() {
 function gameTime() {
     _gameTimeNum--;
     if (_gameTimeNum <= 0) {
-        GameTimeLayer.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;Times Up！';
+        GameTimeLayer.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;時間到\nTimes Up！';
         gameOver();
         GameLayerBG.className += ' flash';
         if (!_close) {
@@ -219,7 +219,7 @@ function gameTime() {
 }
 
 function creatTimeText(n) {
-    return n + '&nbsp;Score:' + _gameScore;
+    return n + '&nbsp;分數\nScore:' + _gameScore;
 }
 
 let _ttreg = / t{1,2}(\d+)/,
@@ -418,10 +418,10 @@ function showGameScoreLayer() {
     let c = document.getElementById(_gameBBList[_gameBBListIndex - 1].id).className.match(_ttreg)[1];
     l.className = l.className.replace(/bgc\d/, 'bgc' + c);
     document.getElementById('GameScoreLayer-text').innerHTML = hide ? '' : "<span style='color:red;'>" + shareText(_gameScore) + "</span>";
-    let score_text = 'Time: ';
+    let score_text = '時間\nTime: ';
     score_text += "<span style='color:red;'>" + (deviation_time / 1000).toFixed(2) + "</span>" + ' s <br> Your score:';
     score_text += "<span style='color:red;'>" + _gameScore + "</span>";
-    score_text += '<br>Average click per second: ';
+    score_text += '<br>平均點按速度\nAverage click per second: ';
     score_text += "<span style='color:red;'>" + (_gameScore * 1000 / deviation_time).toFixed(2);
     score_text += "</span>" + ' times';
     score_text += "<br> <span style='color:red;'>" + (_gameScore * 15000 / deviation_time).toFixed(2) + "</span> BPM"
@@ -432,7 +432,7 @@ function showGameScoreLayer() {
         cookie('bast-score', bast, 100);
     }
 
-    document.getElementById('GameScoreLayer-bast').innerHTML = 'LAST BEST ' + "<span style='color:red;'>" + bast + "</span>";
+    document.getElementById('GameScoreLayer-bast').innerHTML = '最佳\nLAST BEST ' + "<span style='color:red;'>" + bast + "</span>";
     let now = 'Customize key type：' + "<span style='color:red;'>" + key.join('')
         + "</span>";
     document.getElementById('now').innerHTML = now;
