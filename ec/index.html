@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Eatcat</title>
+    <title>音遊底力練習工具"Eatcat"</title>
     <meta itemprop="name" content="Eatcat！" />
     <meta itemprop="description" content="00500" />
     <meta charset="utf-8" />
@@ -45,11 +45,12 @@
             <div style="margin:0 8% 0 9%;">
                 <div style="font-size:1.2em; color:#FEF002;" id="tt">EATCAT</div><br />
                 <div style="font-size: 1.0em; color:rgb(45, 255, 4); line-height:1.5em;" id="tttt">
-                    UPDATE:Now you can enable vertical judgement!<br />
+                    此網站為英文版本Eatcat。如需中文/粵語版本，請至群內獲取html自行打開。
+                    This website is the English version of EatCat,for Chinese/Cantonese versions,grab it from the group on open locally.<br />
                 </div>
                 <div style="font-size: 1.0em; color:#fff; line-height:1.5em;" id="ttt">
                     From the bottom key<br />
-                    See how much cat you can eat~<br />
+                    (Hey)<br />
                     Default settings for PC:Key DFKJ<br />
                 </div>
                 <br />
@@ -63,11 +64,13 @@
                 </div>
 
                 <div id="btn_group2" style="display: block;">
-                    <h2 style="font-size:1.0em; color:#fff; line-height:1.5em;">Easy Setup</h2>
-                    <button type="button" class="btn btn-secondary btn-lg" onclick="autoset('!')">Random</button>
-                    <button type="button" class="btn btn-secondary btn-lg" onclick="autoset('@')">Random (No vert)</button>
-                    <button type="button" class="btn btn-secondary btn-lg" onclick="autoset('@#')">shortvert</button>
-                    <button type="button" class="btn btn-secondary btn-lg" onclick="autoset('2')">vert only</button>
+                    <h2 style="font-size:1.0em; color:#fff; line-height:1.5em;">
+                    簡單設定
+                    Easy Setup</h2>
+                    <button type="button" class="btn btn-secondary btn-lg" onclick="autoset('!')">Random 隨機</button>
+                    <button type="button" class="btn btn-secondary btn-lg" onclick="autoset('@')">Random (No vert) 隨機（無縱連）</button>
+                    <button type="button" class="btn btn-secondary btn-lg" onclick="autoset('@#')">shortvert 短縱</button>
+                    <button type="button" class="btn btn-secondary btn-lg" onclick="autoset('2')">vert only 僅縱連</button>
                     <br><br>
                     <button type="button" class="btn btn-secondary btn-lg" onclick="autoset('32')">comm</button>
                     <button type="button" class="btn btn-secondary btn-lg" onclick="stair()">stair</button>
@@ -75,12 +78,14 @@
                 </div>
                 <div id="setting1" style="display: none;">
                     <h3 style="font-size:1.0em; color:#fff; line-height:1.3em;">
+                        軌道數量：
                         Number of tracks:
                     </h3>
                     <div class="input-group mb-3">
                         <input align="center" type="text" id="k" class="inputtxt" maxlength=10>
                     </div>
                     <h3 style="font-size:1.0em; color:#fff; line-height:1.3em;">
+                        電腦按鍵綁定
                         PC Binding<br />
                         <br />
                         <br />
@@ -89,12 +94,14 @@
                         <input type="text" id="keyboard" class="inputtxt" maxlength=99999>
                     </div>
                     <h3 style="font-size:1.0em; color:#fff; line-height:1.3em;">
+                        時間限制
                         Time Limit (s) <br />
                     </h3>
                     <div class="input-group mb-3">
                         <input type="text" id="timeinput" class="inputtxt" maxlength=4>
                     </div>
                     <h3 style="font-size:1.0em; color:#fff; line-height:1.3em;">
+                        鍵種
                         Keytype<a href="https://docs.qq.com/doc/DYVNMQ0pEWm12VGpv/" target="_blank">
                             <br></a> <br />
                     </h3>
@@ -107,27 +114,32 @@
                 </div>
                 <div id="setting2" style="display: none;">
                     <h3 style="font-size:1.0em; color:#fff; line-height:1.3em;">
+                        關閉聲音
                         Off Sound
                     </h3>
                     <input type="checkbox" class="rradio" id="close">
                     <br>
                     <h3 style="font-size:1.0em; color:#fff; line-height:1.3em;">
+                        隱藏結果
                         Hide results
                     </h3>
                     <input type="checkbox" id="hide" class="rradio">
                     <br>
                     <h3 style="font-size:1.0em;  color:#fff; line-height:1.3em;">
+                   Andrew模式
     Andrew Mode
    </h3>
    <input type="checkbox" id="specialMode" class="rradio" onchange="toggleSpecialMode()">
    <br>
 
                     <h3 style="font-size:1.0em; color:#fff; line-height:1.3em;">
+                        啟用垂直判定
                         Enable Vertical Judgement
                     </h3>
                     <input type="checkbox" id="fsj" class="rradio">
                     <br>
                     <h3 style="font-size:1.0em; color:#fff; line-height:1.3em;">
+                        自定義按鍵材質
                         Customize Key Texture
                     </h3>
                     <div class="u-file-c u-file-btn">
