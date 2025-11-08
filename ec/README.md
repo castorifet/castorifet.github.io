@@ -1,2 +1,2 @@
 # EATCAT
-Based on JavaScript
+基於JavaScript的音遊練習工具
