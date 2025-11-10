@@ -375,7 +375,7 @@ function gameTapEvent(e) {
         tar.className = tar.className.replace(_ttreg, ' tt$1');
         tar.style.backgroundImage = "none";
         _gameBBListIndex++;
-        _gameScore+=1;
+        _gameScore+=650;
         gameLayerMoveNextRow();
     } else if (_gameStart && !tar.notEmpty) {
         if (!_close) {
@@ -455,13 +455,13 @@ function backBtn() {
 function shareText(score) {
 
     deviation_time = (date2.getTime() - _date1.getTime())
-    if (score <= 159) return 'D';
-    if (score <= 160) return 'C';
-    if (score <= 220) return 'B';
-    if (score <= 275) return 'A';
-    if (score <= 350) return 'AA';
-    if (score <= 500) return 'EX';
-    if (score <= 1000) return 'EX+';
+    if (score <= 103350) return 'F';
+    if (score <= 104000) return 'C';
+    if (score <= 143000) return 'B';
+    if (score <= 275 * 650) return 'A';
+    if (score <= 350 * 650) return 'S';
+    if (score <= 500 * 650) return 'V';
+    if (score <= 1000 * 650) return 'V+'
     if (score >= 114514) return '開了';
     return 'PM';
 }
