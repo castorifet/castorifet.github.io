@@ -462,7 +462,7 @@ function shareText(score) {
     if (score <= 350 * 650) return 'S';
     if (score <= 500 * 650) return 'V';
     if (score <= 1000 * 650) return 'V+'
-    if (score >= 114514) return '開了';
+    if (score >= 650 * 114514) return '開了';
     return 'PM';
 }
 
