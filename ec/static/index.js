@@ -419,7 +419,7 @@ function showGameScoreLayer() {
     l.className = l.className.replace(/bgc\d/, 'bgc' + c);
     document.getElementById('GameScoreLayer-text').innerHTML = hide ? '' : "<span style='color:red;'>" + shareText(_gameScore) + "</span>";
     let score_text = '時間\nTime: ';
-    score_text += "<span style='color:red;'>" + (deviation_time / 1000).toFixed(2) + "</span>" + ' s <br> Your score:';
+    score_text += "<span style='color:red;'>" + (deviation_time / 1000).toFixed(2) + "</span>" + ' s <br> 您的分數 Your score:';
     score_text += "<span style='color:red;'>" + _gameScore + "</span>";
     score_text += '<br>平均點按速度\nAverage click per second: ';
     score_text += "<span style='color:red;'>" + (_gameScore * 1000 / deviation_time).toFixed(2);
@@ -433,7 +433,7 @@ function showGameScoreLayer() {
     }
 
     document.getElementById('GameScoreLayer-bast').innerHTML = '最佳\nLAST BEST ' + "<span style='color:red;'>" + bast + "</span>";
-    let now = 'Customize key type：' + "<span style='color:red;'>" + key.join('')
+    let now = '自定義的按鍵種類 Customize key type：' + "<span style='color:red;'>" + key.join('')
         + "</span>";
     document.getElementById('now').innerHTML = now;
     l.style.display = 'block';
@@ -455,13 +455,13 @@ function backBtn() {
 function shareText(score) {
 
     deviation_time = (date2.getTime() - _date1.getTime())
-    if (score <= 64) return 'D';
-    if (score <= 120) return 'C';
-    if (score <= 150) return 'B';
-    if (score <= 222) return 'A';
-    if (score <= 294) return 'AA';
-    if (score <= 412) return 'EX';
-    if (score <= 512) return 'EX+';
+    if (score <= 159) return 'D';
+    if (score <= 160) return 'C';
+    if (score <= 220) return 'B';
+    if (score <= 275) return 'A';
+    if (score <= 350) return 'AA';
+    if (score <= 500) return 'EX';
+    if (score <= 1000) return 'EX+';
     if (score >= 114514) return '開了';
     return 'PM';
 }
