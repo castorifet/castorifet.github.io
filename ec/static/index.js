@@ -422,9 +422,9 @@ function showGameScoreLayer() {
     score_text += "<span style='color:red;'>" + (deviation_time / 1000).toFixed(2) + "</span>" + ' s <br> 您的分數 Your score:';
     score_text += "<span style='color:red;'>" + _gameScore + "</span>";
     score_text += '<br>平均點按速度\nAverage click per second: ';
-    score_text += "<span style='color:red;'>" + (_gameScore * 1000 / deviation_time).toFixed(2);
+    score_text += "<span style='color:red;'>" + (_gameScore * 1000 / 650 / deviation_time).toFixed(2);
     score_text += "</span>" + ' times';
-    score_text += "<br> <span style='color:red;'>" + (_gameScore * 15000 / deviation_time).toFixed(2) + "</span> BPM"
+    score_text += "<br> <span style='color:red;'>" + (_gameScore * 15000 / 650 / deviation_time).toFixed(2) + "</span> BPM"
     document.getElementById('GameScoreLayer-score').innerHTML = score_text;
     let bast = cookie('bast-score');
     if (!bast || _gameScore > bast) {
