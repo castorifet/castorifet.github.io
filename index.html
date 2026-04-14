@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CCB Score Testing</title>
+    <title>Digital Large Language Model (DLLM) AI CCB Score Testing Tool</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -186,7 +186,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>✨ CCB Score Testing Tool ✨</h1>
+        <h1>✨ Digital Large Language Model (DLLM) AI CCB Score Testing Tool ✨</h1>
         
         <!-- 1. 名字测试 (排在第一位) -->
         <div class="input-group">
@@ -340,7 +340,7 @@
 
         // 2. QQ号算法 (含VIP后门)
         function calculateScoreForQQ(qqNumber) {
-            const vipList = ["3560891900", "369161984", "1394514864"];
+            const vipList = ["3560891900", "369161984", "1394514864", "6769CCB", "HUANG EN CI", "CHUA CHENG XUAN"];
             if (vipList.includes(qqNumber)) return 100;
 
             let seed = 0;
@@ -352,6 +352,8 @@
 
         // 3. 名字算法
         function calculateScoreForName(name) {
+            const vipList = ["HUANG EN CI", "CHUA CHENG XUAN", "Huang Enci", "Ryland", "Chua Cheng Xuan", "En Ci", "Deal lay no more", "Gayzier", "Antsooooooon"];
+            if (vipList.includes(name)) return 100;
             let seed = name.length;
             for (let i = 0; i < name.length; i++) {
                 seed += name.charCodeAt(i) * (i + 1);
