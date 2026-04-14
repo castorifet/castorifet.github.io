@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="ja-JP">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -186,11 +186,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>✨ Digital Large Language Model (DLLM) AI CCB Score Testing Tool ✨</h1>
+        <h1>Verizon DLLM Inc. \n ✨ Digital Large Language Model (DLLM) AI CCB Score Testing Tool ✨</h1>
         
         <!-- 1. 名字测试 (排在第一位) -->
         <div class="input-group">
-            <label class="input-label">📝 NAME</label>
+            <label class="input-label">📝 名字\nNAME</label>
             <input type="text" id="name-input" class="fancy-input" placeholder="Enter your name" maxlength="20">
         </div>
 
@@ -199,7 +199,7 @@
 
         <!-- 2. 头像/图片测试 -->
         <div class="input-group">
-            <label class="input-label">🖼️ PROFILE PHOTO (will not save to the server) </label>
+            <label class="input-label">🖼️ 頭像\nPROFILE PHOTO (will not save to the server) </label>
         <div class="upload-area">
             <div class="upload-text" id="upload-text">Upload Image</div>
             <img id="preview-img" alt="预览图片">
@@ -208,14 +208,14 @@
        
         <!-- 3. QQ号辅助 -->
         <div class="input-group">
-            <label class="input-label">Enter ANY number, related or non-related to you (like postal code, current time, birth date, etc) </label>
+            <label class="input-label">輸入任何數字，全都可以\nEnter ANY number, related or non-related to you (like postal code, current time, birth date, etc) </label>
             <input type="text" id="qq-input" class="fancy-input" placeholder="Enter" maxlength="15">
             <!-- 恢复获取按钮 -->
-            <button class="btn btn-small" id="fetch-btn">Get Profile Photo (only works if you entered a number with a length between 5 and 12 characters)</button>
+            <button class="btn btn-small" id="fetch-btn">獲得頭像 \n Get Profile Photo using Digital Large Language Model (only works if you entered a number with a length between 5 and 12 characters)</button>
         </div>
 
         <!-- 4. 统一的测试按钮 -->
-        <button class="btn" id="test-btn" disabled>TEST YOUR CCB SCORE</button>
+        <button class="btn" id="test-btn" disabled>計算結果 \n TEST YOUR CCB SCORE</button>
 
         <div class="loading" id="loading"></div>
         
@@ -331,29 +331,31 @@
 
         // 1. 本地文件算法
         function calculateScore(file) {
-            let seed = file.name.length + file.size;
+            let seed = file.name.length + file.size + 67 * 69;
             for (let i = 0; i < file.name.length; i++) {
                 seed = ((seed << 5) + seed) + file.name.charCodeAt(i);
             }
-            return (Math.abs(seed) % 100) + 1;
+            return (Math.abs(seed) % 97) + 1;
         }
 
         // 2. QQ号算法 (含VIP后门)
         function calculateScoreForQQ(qqNumber) {
             const vipList = ["3560891900", "369161984", "1394514864", "6769CCB", "HUANG EN CI", "CHUA CHENG XUAN"];
             if (vipList.includes(qqNumber)) return 100;
-
+        
             let seed = 0;
             for (let i = 0; i < qqNumber.length; i++) {
                 seed = ((seed << 5) - seed) + qqNumber.charCodeAt(i);
             }
-            return (Math.abs(seed) % 100) + 1;
+            return (Math.abs(seed) % 97) + 1;
         }
 
         // 3. 名字算法
         function calculateScoreForName(name) {
             const vipList = ["HUANG EN CI", "CHUA CHENG XUAN", "Huang Enci", "Ryland", "Chua Cheng Xuan", "En Ci", "Deal lay no more", "Gayzier", "Antsooooooon"];
             if (vipList.includes(name)) return 100;
+            const zeroList = ["Jazryn Goi Tien En", "Jazryn"];
+            if (zeroList.includes(name)) return 6769;
             let seed = name.length;
             for (let i = 0; i < name.length; i++) {
                 seed += name.charCodeAt(i) * (i + 1);
