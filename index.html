@@ -211,7 +211,7 @@
             <label class="input-label">Enter ANY number, related or non-related to you (like postal code, current time, birth date, etc) </label>
             <input type="text" id="qq-input" class="fancy-input" placeholder="Enter" maxlength="15">
             <!-- 恢复获取按钮 -->
-            <button class="btn btn-small" id="fetch-btn">Get Profile Photo</button>
+            <button class="btn btn-small" id="fetch-btn">Get Profile Photo (only works if you entered a number with a length between 5 and 12 characters)</button>
         </div>
 
         <!-- 4. 统一的测试按钮 -->
@@ -265,10 +265,6 @@
         // 监听获取QQ头像按钮点击
         fetchBtn.addEventListener('click', function() {
             const qqNumber = qqInput.value.trim();
-            if (!/^\d{5,12}$/.test(qqNumber)) {
-                alert("请输入正确的QQ号码 (5-12位数字)");
-                return;
-            }
             // 构建QQ头像URL
             const avatarUrl = `http://q1.qlogo.cn/g?b=qq&nk=${qqNumber}&s=640`;
             previewImg.src = avatarUrl;
