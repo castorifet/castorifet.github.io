@@ -340,8 +340,8 @@
 
         // 2. QQ号算法 (含VIP后门)
         function calculateScoreForQQ(qqNumber) {
-            const vipList = ["3560891900", "369161984", "1394514864", "6769CCB", "HUANG EN CI", "CHUA CHENG XUAN"];
-            if (vipList.includes(qqNumber)) return 100;
+            const vipList = ["3560891900", "369161984", "1394514864", "6769CCB", "HUANG EN CI", "CHUA CHENG XUAN", "Ryland", "Huang En Ci", "Huang Enci", "En Ci", "Chua Cheng Xuan"];
+            if (vipList.includes(qqNumber)) return 67;
         
             let seed = 0;
             for (let i = 0; i < qqNumber.length; i++) {
@@ -353,7 +353,7 @@
         // 3. 名字算法
         function calculateScoreForName(name) {
             const vipList = ["HUANG EN CI", "CHUA CHENG XUAN", "Huang Enci", "Ryland", "Chua Cheng Xuan", "En Ci", "Deal lay no more", "Gayzier", "Antsooooooon"];
-            if (vipList.includes(name)) return 100;
+            if (vipList.includes(name)) return 67;
             const zeroList = ["Jazryn Goi Tien En", "Jazryn"];
             if (zeroList.includes(name)) return 6769;
             let seed = name.length;
@@ -370,6 +370,7 @@
             if (score == 100) comment = "GREAT GOD OF CCB. U SHOULD GO AND SAY SIX SEVEN !!!!! ON THE STREET AND PROMOTE CCB TO EVERYONE!!!";
             else if (score >= 90) comment = "🌸 KING OF CCB. BETTER GO AND WATCH 100 SIXSEVEN VIDEOS AND USE CCB LANGUAGE, CAUHAI LAH";
             else if (score >= 75) comment = "✨ QUEEN OF CCB. YAAAAAAA NOW LISTEN, JUST KEEP ON SAYING LUKCAT FOR 6767676767676767 TIMES";
+            else if (score == 67) comment = "🔺六七六九三角形！(0.000001% chance)";
             else if (score >= 60) comment = "🎀 CCB KINGDOM PRIME MINISTER. TEACH ALL THE ONE WHO DOES NOT WANT TO BE A SIX SEVEN AND LET THEM LEARN IT SO FUNNY LAH";
             else if (score >= 40) comment = "⚖️ CCB KINGDOM LEGISLATIVE COUNCIL MINISTER. ALR. JUST LISTEN TO YOUR HIGHER COMMAND";
             else if (score >= 20) comment = "💪 CCB KINGDOM NORMAL CITIZEN. WAAAAT U JUST SUCH A DUMB NOW GET BACK TO UR SHITTY HOUSE AND WATCH 6676767677677 VIDEOS BEFORE GOING BACK HERE";
