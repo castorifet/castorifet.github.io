@@ -182,24 +182,17 @@
             background: linear-gradient(to right, transparent, #fecfef, transparent);
             margin: 1.5rem 0;
         }
-        .footer {
-    position: fixed;
-    top: 10px;              /* 改這裡 */
-    left: 50%;
-    transform: translateX(-50%);
+        .top-image {
     text-align: center;
-    z-index: 999;
+    margin-bottom: 20px;
 }
 
-.footer img {
-    max-width: 250px;
-    opacity: 0.8;
+.top-image img {
+    max-width: 350px;
+    opacity: 1.0;
 }
     </style>
 </head>
-<footer class="footer">
-    <img src="https://castorifet.github.io/image.jpg" alt="top image">
-</footer>
 <body>
     <div class="container">
         <h1>Verizon DLLM Inc. &#10;&#13; ✨ Digital Large Language Model (DLLM) AI CCB Score Testing Tool ✨</h1>
@@ -212,7 +205,11 @@
 
         <!-- 分隔线 -->
         <div class="divider"></div>
+       <div class="top-image">
+    <img src="https://castorifet.github.io/image.jpg" alt="top image">
+</div>
 
+<div class="container">
         <!-- 2. 头像/图片测试 -->
         <div class="input-group">
             <label class="input-label">🖼️ 頭像 &#10;&#13;PROFILE PHOTO (will not save to the server) </label>
