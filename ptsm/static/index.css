@@ -158,7 +158,7 @@ body {
 }
 
 .bl {
-	border-left: 1px solid #ceba08;
+	border-left: 1px solid #ED9CDB;
 }
 
 @-ms-keyframes flash {
@@ -223,7 +223,7 @@ body {
 
 .btn {
 	text-decoration: none;
-	background: #ceba08;
+	background: #ED9CDB;
 	color: #f2f2f2;
 	padding: 10px 30px 10px 30px;
 	font-size: 15px;
