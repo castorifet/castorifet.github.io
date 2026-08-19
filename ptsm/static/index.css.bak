@@ -111,7 +111,7 @@ body {
 	left: 0;
 	width: 100%;
 	text-align: center;
-	color: rgb(233, 138, 131);
+	color: rgb(62, 157, 212);
 	font-size: 4em;
 	text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff;
 	overflow: hidden;
@@ -134,7 +134,7 @@ body {
 
 .block {
 	position: absolute;
-	border-top: 1px solid #b8dfe6;
+	border-top: 1px solid #ceba08;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -158,7 +158,7 @@ body {
 }
 
 .bl {
-	border-left: 1px solid #b8dfe6;
+	border-left: 1px solid #ceba08;
 }
 
 @-ms-keyframes flash {
@@ -223,7 +223,7 @@ body {
 
 .btn {
 	text-decoration: none;
-	background: #2f435e;
+	background: #ceba08;
 	color: #f2f2f2;
 	padding: 10px 30px 10px 30px;
 	font-size: 15px;
